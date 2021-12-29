@@ -1,7 +1,12 @@
 package woroschbitj.controler;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import woroschbitj.model.City;
+import woroschbitj.data.CityRepository;
+import woroschbitj.data.model.City;
+
+import java.util.Arrays;
+import java.util.List;
 
 import static woroschbitj.controler.CityController.BASE_PATH;
 
@@ -9,10 +14,14 @@ import static woroschbitj.controler.CityController.BASE_PATH;
 @RequestMapping(BASE_PATH)
 public class CityController {
 
+    @Autowired
+    CityRepository cityRepository;
+
     public final static String BASE_PATH = "api/v1/city";
 
     @GetMapping(produces = "application/json")
-    public @ResponseBody City getCity() {
-        return City.builder().name("Berlin").country("DE").build();
+    public @ResponseBody
+    List<City> getCity() {
+        return cityRepository.findAll();
     }
 }
