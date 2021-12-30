@@ -5,7 +5,6 @@ import org.springframework.web.bind.annotation.*;
 import woroschbitj.data.CityRepository;
 import woroschbitj.data.model.City;
 
-import java.util.Arrays;
 import java.util.List;
 
 import static woroschbitj.controler.CityController.BASE_PATH;

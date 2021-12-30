@@ -22,6 +22,7 @@ public class City {
     private Long id;
 
     public String name;
+    //alpha3
     public String country;
 
 }
