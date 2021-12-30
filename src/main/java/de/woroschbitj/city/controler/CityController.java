@@ -1,13 +1,13 @@
-package woroschbitj.controler;
+package de.woroschbitj.city.controler;
 
+import de.woroschbitj.city.repository.CityRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import woroschbitj.data.CityRepository;
-import woroschbitj.data.model.City;
+import de.woroschbitj.city.data.City;
 
 import java.util.List;
 
-import static woroschbitj.controler.CityController.BASE_PATH;
+import static de.woroschbitj.city.controler.CityController.BASE_PATH;
 
 @RestController
 @RequestMapping(BASE_PATH)

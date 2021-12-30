@@ -1,4 +1,4 @@
-package woroschbitj.data.model;
+package de.woroschbitj.city.data;
 
 import lombok.*;
 
